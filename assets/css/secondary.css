@@ -1,0 +1,132 @@
+/* Fonts */
+
+@font-face {
+	font-family: Poppins;
+	font-display: block;
+	src: url(../font/Poppins-Regular.ttf);
+}
+
+@font-face {
+	font-family: Oswald;
+	font-display: block;
+	src: url(../font/Oswald-Regular.ttf);
+}
+
+@font-face {
+	font-family: Anton;
+	font-display: block;
+	src: url(../font/Anton-Regular.ttf);
+}
+
+/* General */
+
+.bg {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+}
+
+.coming-soon {
+	align-self: center;
+	font-family: 'Anton', 'Oswald';
+	font-size: 17.2161vw;
+	font-weight: bold;
+	margin-left: 20px;
+	letter-spacing: 3px;
+}
+
+button {
+	display: block;
+	padding: 24px 48px;
+	font-family: 'Poppins';
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 6px;
+	color: #fff;
+	border: 2px solid #FFF;
+	text-transform: uppercase;
+	outline: none;
+	overflow: hidden;
+	background: none;
+	z-index: 12;
+	cursor: crosshair;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	transition: 0.8s ease-out;
+}
+
+button:hover {
+	color: #FFF;
+	cursor: crosshair;
+}
+
+button:before {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 100%;
+	z-index: -1;
+	transition: top 0.8s ease-out;
+}
+
+button:hover:before {
+	top: 0;
+}
+
+/* Specific style for each file */
+
+.btn-before-the-storm:before {
+	background: #791576;
+}
+
+.btn-life-is-strange-2:before {
+	background: #2C3B4E;
+}
+
+.btn-captain-spirit:before {
+	background: #EEC44C;
+}
+
+.before-the-storm {
+	color: rgba(121,21,118,0.7);
+	background-image: url(../img/lis-before-the-storm.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.life-is-strange-2 {
+	color: rgba(44,59,78,0.7);
+	background-image: url(../img/life-is-strange-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.captain-spirit {
+	color: rgba(238,196,76,0.7);
+	background-image: url(../img/captain-spirit.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Selections */
+
+.captain-spirit .coming-soon::selection {
+	background-color: #EEC44C;
+	color: #2a2a2a;
+}
+
+.before-the-storm .coming-soon::selection {
+	background-color: #791576;
+	color: #2a2a2a;
+}
+
+.life-is-strange-2 .coming-soon::selection {
+	background-color: #2C3B4E;
+	color: #2a2a2a;
+}

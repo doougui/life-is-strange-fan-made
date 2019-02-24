@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- Title & Meta -->
+	<meta charset="utf-8">
+	<title>Life is Strange - Fan Made</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Description" content="A unofficial Life is Strange website made by a fan of the game.">
+	<meta name="theme-color" content="#C7CCCB">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Prelaod -->
+	<link rel="preload" href="assets/css/normalize.css" as="style">
+	<link rel="preload" href="assets/css/style.css" as="style">
+	<link rel="preload" href="assets/js/script.js" as="script">
+	<link rel="preload" href="assets/font/HankenGrotesk-Light.otf" as="font" crossorigin="anonymous">
+	<link rel="preload" href="assets/font/Poppins-Regular.ttf" as="font" crossorigin="anonymous">
+	<link rel="preload" href="assets/font/Oswald-Regular.ttf" as="font" crossorigin="anonymous">
+	<!-- Favicon & CSS -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Life is Strange">
+	<link rel="apple-touch-icon" href="assets/img/icons/icon-152x152.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/img/icons/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#C7CCCB">
+	<link rel="icon" type="image/png" href="assets/img/icons/icon-144x144.png">
+</head>
+<body>
+	<!-- Intro Section -->
+	<section id="intro">
+		<div class="overlay">
+			<p class="screen">EXPLORAR</p>
+			<div class="intro">
+				<button class="myBtn" alt="Explorar" onclick="fadeOut(); setTimeout(enableScroll, 2800);">EXPLORAR</button>
+			</div>
+		</div>
+
+		<div class="overlay-2"></div>
+	</section>
+
+	<!-- Full Screen Menu (for mobile devices) --> 
+
+	<div class="fullscreen-menu">
+		<ul>
+			<li onclick="closeFullscreen()"><a class="menu-item" href="#synopsis">Sinopse</a></li>
+			<li onclick="closeFullscreen()"><a class="menu-item" href="#characters">Personagens</a></li>
+			<li onclick="closeFullscreen()"><a class="menu-item" href="#soundtrack">Soundtrack</a></li>
+			<li onclick="closeFullscreen()"><a class="menu-item" href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange" target="_blank" rel="noopener">Site Oficial</a></li>
+		</ul>
+	</div>
+
+	<!-- Advice Header (unofficial website) -->
+
+	<section class="unofficial-header-bg" id="unofficial-header">
+		<div class="unofficial-header">
+			<a href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange" target="_blank" rel="noopener" class="item-unofficial-header" alt="Acessar site oficial"><p><i>Site oficial</i></p></a>
+			<p class="item-unofficial-header" alt="Site não oficial feito por fã">Site não oficial feito por fã</p>
+			<p class="item-unofficial-header" alt="Fechar" onclick="closeBox()">&times;</p>
+		</div>
+	</section>
+
+	<!-- Header -->
+	<header class="header-bg" id="header">
+		<div class="header">
+			<input id="burger-menu" type="checkbox" onclick="fullScreenMenu()">
+		
+			<label class="mobile-menu" for="burger-menu">
+				<div class="menu">
+					<span class="burger"></span>
+				</div>
+			</label>
+
+			<div class="logo">
+				<a href="index.html"><img id="img-logo" src="assets/img/logo.png" alt="Life is Strange"></a>
+			</div>
+
+			<div class="icons">
+				<a href="https://twitter.com/lifeisstrange" target="_blank" rel="noopener"><img src="assets/img/twitter.png" alt="Twitter oficial">
+				<a href="https://www.facebook.com/pages/category/Community/Life-is-Strange-1548042748789838/" target="_blank" rel="noopener"><img src="assets/img/facebook.png" alt="Facebook oficial"></a>
+				<a href="https://www.instagram.com/lifeisstrangegame/?hl=pt-br" target="_blank" rel="noopener"><img src="assets/img/instagram.png" alt="Instagram oficial"></a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Container -->
+	<section class="container">
+		<!-- Left Menu -->
+		<nav class="menu-left">
+			<ul>
+				<li><a href="#synopsis" class="menu-item">Sinopse</a></li>
+				<hr>
+				<li><a href="#characters" class="menu-item">Personagens</a></li>
+				<hr>
+				<li><a href="#soundtrack" class="menu-item">Soundtrack</a></li>
+				<hr>
+				<li><a href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange" target="_blank" rel="noopener">Site Oficial</a></li>
+				<hr>
+			</ul>
+			<ul class="life-is-strange-games-mobile">
+				<li><a href="before-the-storm.html">Before the Storm</a></li>
+				<hr>
+				<li><a href="captain-spirit.html">Captain Spirit</a></li>
+				<hr>
+				<li><a href="life-is-strange-2.html">Life is Strange 2</a></li>
+				<hr>
+			</ul>
+		</nav>
+		
+		<!-- Content -->
+		<section class="content">
+			<!-- Synopsis --> 
+			<section class="synopsis" id="synopsis">
+				<div class="synopsis-image">
+					<img src="assets/img/rail.jpg" alt="Sinopse">
+					<h2 class="title-synopsis" id="title-synopsis">Sinopse</h2>
+				</div>
+				<div class="synopsis-content">
+					<p>Life is Strange conta a história de Max Caulfield, uma estudante de fotografia que, ao ver a vida de uma amiga (há tempos sem contato) em perigo, descobre que tem a habilidade de voltar no tempo. Isso, mais tarde descobrimos, gera um efeito borboleta que é intimamente conectado à ideia de escolha e consequência proposta pelo jogo.</p>
+				</div>
+			</section>	
+			
+			<!-- Characters -->
+			<section class="characters" id="characters">
+				<div class="characters-container">
+					<div class="character">
+						<img src="assets/img/max-character.jpg" alt="Max Caulfield">
+						<div class="character-description">
+							<p>Max é nerd, bem introvertida e levemente auto-consciente, particularmente em relação às suas fotografias. Ela prefere apenas observar o mundo a sua volta do que realmente participar dele.</p>
+						</div>
+					</div>
+					<div class="character">
+						<img src="assets/img/chloe-character.jpg" alt="Chloe Price">
+						<div class="character-description">
+							<p>Chloe é uma jovem teimosa, arteira e rebelde. Ela é uma típica rockeira punk, como representado em seu gosto musical e roupas. Ela gosta de tomar cerveja, e pode ser descrita como extrovertida.</p>
+						</div>
+					</div>
+					<div class="character">
+						<img src="assets/img/rachel-character.jpg" alt="Rachel Amber">
+						<div class="character-description">
+							<p>Rachel é popular e legal, mas também rebelde. Ia à muitas festas, usava drogas e tinha uma grande paixão por punk rock, assim como Chloe, expressada tanto em seu gosto musical e estilo.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+	
+			<!-- Soundtrack -->
+			<section class="soundtrack" id="soundtrack">
+				<div class="soundtrack-container">
+					<h2 class="title-soundtrack">Soundtrack</h2>	
+
+					<div class="songs">
+						<ul>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Angus & Julia Stone - Santa Monica Dream</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Local Natives - Mt. Washington</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Syd Matters - To All Of You</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">alt-J - Something Good</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Breton - Got Well Soon</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Message To The Bears - Mountains</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">José González - Crosses</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Amanda Palmer - In My Mind (feat. Brian Viglione)</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Bright Eyes - Lua</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Mogwai - Kids Will Be Skeletons</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Sparklehorse - Piano Fire</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Mudflow - The Sense of Me</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Foals - Spanish Sahara</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Syd Matters - Obstacles</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Golden Hour</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">The Storm</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Blackwell Academy</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Kate</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Timeless</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Timelines</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Night Walk</a></li>
+							<hr>
+							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Max and Chloe</a></li>
+							<hr>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="soundtrack-image">
+					<img src="assets/img/soundtrack.jpg" alt="Soundtrack">
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer class="footer-bg">
+				<div class="footer">
+
+					<!-- Footer Columms --> 
+					<div class="footer-item">
+						<h2>Contato</h2>
+						<ul>
+							<li>lifeisstrange@gmail.com</li>
+							<li>+55 48 99975-1669</li>
+							<li>Rua Nestor H. Luiz</li>
+							<li>Jaguaruna, Santa Catarina</li>
+						</ul><br/><br/>
+
+						<h3>© Douglas Pinheiro Goulart - 2019</h3>
+					</div>
+
+					<div class="footer-item">
+						<h2>Desenvolvedoras</h2>
+
+						<ul>
+							<li><a href="http://dont-nod.com/" target="_blank" rel="noopener">Dontnod Entertainment</a></li>
+							<li><a href="http://deckninegames.com/" target="_blank" rel="noopener">Deck Nine Games</a></li>
+							<li><a href="https://www.feralinteractive.com/br/" target="_blank" rel="noopener">Feral Interactive</a></li>
+						</ul>
+
+						<img class="go-to-top" src="assets/img/top.png" alt="Ir para o topo" title="Ir para o topo">
+					</div>
+
+					<div class="footer-item">
+						<label for="newsletter"><h2>Newsletter</h2></label>
+						<form method="POST">
+							<input id="newsletter" type="email" placeholder="Email Address" autocomplete="off">
+							<button type="submit">-&gt;</button>
+						</form>
+					</div>
+
+					<div class="footer-item">
+						<h2>Outros Jogos</h2>
+						
+						<ul>
+							<li><a href="before-the-storm.html" target="_blank" rel="noopener">Before the Storm</a></li>
+							<li><a href="captain-spirit.html" target="_blank" rel="noopener">Captain Spirit</a></li>
+							<li><a href="life-is-strange-2.html" target="_blank" rel="noopener">Life is Strange 2</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</section>
+
+		<!-- Right Menu -->
+
+		<nav class="menu-right">
+			<ul>
+				<a href="before-the-storm.html" alt="Life is Strange: Before the Storm" title="Life is Strange: Before the Storm"><li id="before-the-storm">Before the storm</li></a>
+				<a href="captain-spirit.html" alt="The Awesome Adventures of Captain Spirit" title="The Awesome Adventures of Captain Spirit"><li id="captain-spirit"">Captain Spirit</li></a>
+				<a href="life-is-strange-2.html" alt="Life is Strange 2" title="Life is Strange 2"><li id="lis-2">Life is Strange 2</li></a>
+			</ul>
+		</nav>
+	</section>
+	
+	<!-- JavaScript Files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" aync></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
+	<script type="text/javascript" src="assets/js/script.js" defer></script>
+</body>
+</html>
