@@ -36,7 +36,7 @@
 		<div class="overlay">
 			<p class="screen">EXPLORAR</p>
 			<div class="intro">
-				<button class="intro-btn" onclick="fadeOut(); setTimeout(enableScroll, 2800);">EXPLORAR</button>
+				<button class="intro-btn">EXPLORAR</button>
 			</div>
 		</div>
 
@@ -45,14 +45,16 @@
 
 	<!-- Full Screen Menu (for mobile devices) --> 
 
-	<div class="fullscreen-menu">
+	<nav class="fullscreen-menu">
 		<ul>
-			<li onclick="closeFullscreen()"><a class="menu-item" href="#synopsis">Sinopse</a></li>
-			<li onclick="closeFullscreen()"><a class="menu-item" href="#characters">Personagens</a></li>
-			<li onclick="closeFullscreen()"><a class="menu-item" href="#soundtrack">Soundtrack</a></li>
-			<li onclick="closeFullscreen()"><a class="menu-item" href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange" target="_blank" rel="noopener">Site Oficial</a></li>
+			<li><a class="menu-item" href="#synopsis">Sinopse</a></li>
+			<li><a class="menu-item" href="#characters">Personagens</a></li>
+			<li><a class="menu-item" href="#soundtrack">Soundtrack</a></li>
+			<li>
+				<a class="menu-item" href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange">Site Oficial</a>
+			</li>
 		</ul>
-	</div>
+	</nav>
 
 	<!-- Advice Header (unofficial website) -->
 
@@ -60,14 +62,14 @@
 		<div class="unofficial-header">
 			<a href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange" target="_blank" rel="noopener" class="item-unofficial-header" alt="Acessar site oficial"><p><i>Site oficial</i></p></a>
 			<p class="item-unofficial-header" alt="Site não oficial feito por fã">Site não oficial feito por fã</p>
-			<p class="item-unofficial-header" alt="Fechar" onclick="closeBox()">&times;</p>
+			<p class="item-unofficial-header" alt="Fechar" id="close-box">&times;</p>
 		</div>
 	</section>
 
 	<!-- Header -->
 	<header class="header-bg" id="header">
 		<div class="header">
-			<input id="burger-menu" type="checkbox" onclick="fullScreenMenu()">
+			<input id="burger-menu" type="checkbox">
 		
 			<label class="mobile-menu" for="burger-menu">
 				<div class="menu">
@@ -124,7 +126,7 @@
 				<hr>
 				<li><a href="#soundtrack" class="menu-item">Soundtrack</a></li>
 				<hr>
-				<li><a href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange" target="_blank" rel="noopener">Site Oficial</a></li>
+				<li><a href="https://lifeisstrange.square-enix-games.com/en-us/games/life-is-strange">Site Oficial</a></li>
 				<hr>
 			</ul>
 			<ul class="life-is-strange-games-mobile">
@@ -138,7 +140,7 @@
 		</nav>
 		
 		<!-- Content -->
-		<section class="content">
+		<main class="content">
 			<!-- Synopsis --> 
 			<section class="synopsis" id="synopsis">
 				<div class="synopsis-image">
@@ -356,7 +358,7 @@
 					</div>
 				</div>
 			</footer>
-		</section>
+		</main>
 
 		<!-- Right Menu -->
 
@@ -376,7 +378,6 @@
 	</section>
 	
 	<!-- JavaScript Files -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" aync></script>
 	<script src="assets/js/modernizr-webp.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
 	<script type="text/javascript" src="assets/js/script.js" defer></script>

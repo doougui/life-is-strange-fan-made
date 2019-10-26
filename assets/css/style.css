@@ -101,7 +101,7 @@ body {
 	background-color: #000;
 }
 
-button {
+button:not(.send) {
 	font-family: 'Poppins';
 	position: absolute;
 	display: block;
@@ -120,14 +120,13 @@ button {
 	transition: 0.8s ease-out;
 }
 
-button:hover {
+button:not(.send):hover {
 	cursor: crosshair;
 }
 
-button:before {
+button:not(.send):before {
 	content: "";
 	position: absolute;
-	background: #FFF;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -136,7 +135,7 @@ button:before {
 	transition: top 0.8s ease-out;
 }
 
-button:hover:before {
+button:not(.send):hover:before {
 	top: 0;
 }
 
@@ -144,6 +143,10 @@ button:hover:before {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.intro-btn:before {
+	background: #FFF;
 }
 
 .intro-btn:hover {
@@ -701,6 +704,9 @@ input:checked ~ label .burger::after {
 	overflow: hidden;
 	-webkit-filter: blur(1px);
 	filter: blur(1px);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .coming-soon {
@@ -741,8 +747,6 @@ input:checked ~ label .burger::after {
 
 .before-the-storm {
 	color: rgba(121,21,118,0.7);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 	.webp .before-the-storm {
 		background-image: url(../img/webp/lis-before-the-storm.webp);
@@ -753,8 +757,6 @@ input:checked ~ label .burger::after {
 
 .life-is-strange-2 {
 	color: rgba(44,59,78,0.7);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 	.webp .life-is-strange-2 {
 		background-image: url(../img/webp/life-is-strange-2.webp);	
@@ -765,8 +767,6 @@ input:checked ~ label .burger::after {
 
 .captain-spirit {
 	color: rgba(238,196,76,0.7);
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 	.webp .captain-spirit {
 		background-image: url(../img/webp/captain-spirit.webp);
@@ -777,20 +777,18 @@ input:checked ~ label .burger::after {
 
 /* Secondary pages -> Selections */
 
-.captain-spirit .coming-soon::selection {
-	background-color: #EEC44C;
+.coming-soon::selection {
 	color: #2a2a2a;
 }
-
-.before-the-storm .coming-soon::selection {
-	background-color: #791576;
-	color: #2a2a2a;
-}
-
-.life-is-strange-2 .coming-soon::selection {
-	background-color: #2C3B4E;
-	color: #2a2a2a;
-}
+	.captain-spirit .coming-soon::selection {
+		background-color: #EEC44C;
+	}
+	.before-the-storm .coming-soon::selection {
+		background-color: #791576;
+	}
+	.life-is-strange-2 .coming-soon::selection {
+		background-color: #2C3B4E;
+	}
 
 /* Media Queries */
 
