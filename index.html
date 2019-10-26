@@ -36,7 +36,7 @@
 		<div class="overlay">
 			<p class="screen">EXPLORAR</p>
 			<div class="intro">
-				<button class="myBtn" alt="Explorar" onclick="fadeOut(); setTimeout(enableScroll, 2800);">EXPLORAR</button>
+				<button class="intro-btn" onclick="fadeOut(); setTimeout(enableScroll, 2800);">EXPLORAR</button>
 			</div>
 		</div>
 
@@ -76,13 +76,39 @@
 			</label>
 
 			<div class="logo">
-				<a href="index.html"><img id="img-logo" src="assets/img/logo.png" alt="Life is Strange"></a>
+				<a href="./">
+					<picture id="img-logo">
+						<source type="image/webp" srcset="assets/img/webp/logo.webp">
+						<source type="image/png" srcset="assets/img/webp/logo.png" />
+						<img src="assets/img/fallbacks/logo.png" alt="Life is Strange">
+					</picture>
+				</a>
 			</div>
 
 			<div class="icons">
-				<a href="https://twitter.com/lifeisstrange" target="_blank" rel="noopener"><img src="assets/img/twitter.png" alt="Twitter oficial">
-				<a href="https://www.facebook.com/pages/category/Community/Life-is-Strange-1548042748789838/" target="_blank" rel="noopener"><img src="assets/img/facebook.png" alt="Facebook oficial"></a>
-				<a href="https://www.instagram.com/lifeisstrangegame/?hl=pt-br" target="_blank" rel="noopener"><img src="assets/img/instagram.png" alt="Instagram oficial"></a>
+				<a href="https://twitter.com/lifeisstrange">
+					<picture>
+						<source type="image/webp" srcset="assets/img/webp/twitter.webp">
+						<source type="image/png" srcset="assets/img/webp/twitter.png" />
+						<img src="assets/img/fallbacks/twitter.png" alt="Twitter oficial">
+					</picture>
+				</a>
+
+				<a href="https://www.facebook.com/pages/category/Community/Life-is-Strange-1548042748789838/">
+					<picture>
+						<source type="image/webp" srcset="assets/img/webp/facebook.webp">
+						<source type="image/png" srcset="assets/img/webp/facebook.png" />
+						<img src="assets/img/fallbacks/facebook.png" alt="Facebook oficial">
+					</picture>
+				</a>
+
+				<a href="https://www.instagram.com/lifeisstrangegame/?hl=pt-br">
+					<picture>
+						<source type="image/webp" srcset="assets/img/webp/instagram.webp">
+						<source type="image/png" srcset="assets/img/webp/instagram.png" />
+						<img src="assets/img/fallbacks/instagram.png" alt="Instagram oficial">
+					</picture>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -116,7 +142,11 @@
 			<!-- Synopsis --> 
 			<section class="synopsis" id="synopsis">
 				<div class="synopsis-image">
-					<img src="assets/img/rail.jpg" alt="Sinopse">
+					<picture>
+						<source type="image/webp" srcset="assets/img/webp/rail.webp">
+						<source type="image/jpeg" srcset="assets/img/webp/rail.jpg" />
+						<img src="assets/img/fallbacks/rail.jpg" alt="Sinopse">
+					</picture>
 					<h2 class="title-synopsis" id="title-synopsis">Sinopse</h2>
 				</div>
 				<div class="synopsis-content">
@@ -128,19 +158,31 @@
 			<section class="characters" id="characters">
 				<div class="characters-container">
 					<div class="character">
-						<img src="assets/img/max-character.jpg" alt="Max Caulfield">
+						<picture>
+							<source type="image/webp" srcset="assets/img/webp/max-character.webp">
+							<source type="image/jpeg" srcset="assets/img/webp/max-character.jpg" />
+							<img src="assets/img/fallbacks/max-character.jpg" alt="Max Caulfield">
+						</picture>
 						<div class="character-description">
 							<p>Max é nerd, bem introvertida e levemente auto-consciente, particularmente em relação às suas fotografias. Ela prefere apenas observar o mundo a sua volta do que realmente participar dele.</p>
 						</div>
 					</div>
 					<div class="character">
-						<img src="assets/img/chloe-character.jpg" alt="Chloe Price">
+						<picture>
+							<source type="image/webp" srcset="assets/img/webp/chloe-character.webp">
+							<source type="image/jpeg" srcset="assets/img/webp/chloe-character.jpg" />
+							<img src="assets/img/fallbacks/chloe-character.jpg" alt="Chloe Price">
+						</picture>
 						<div class="character-description">
 							<p>Chloe é uma jovem teimosa, arteira e rebelde. Ela é uma típica rockeira punk, como representado em seu gosto musical e roupas. Ela gosta de tomar cerveja, e pode ser descrita como extrovertida.</p>
 						</div>
 					</div>
 					<div class="character">
-						<img src="assets/img/rachel-character.jpg" alt="Rachel Amber">
+						<picture>
+							<source type="image/webp" srcset="assets/img/webp/rachel-character.webp">
+							<source type="image/jpeg" srcset="assets/img/webp/rachel-character.jpg" />
+							<img src="assets/img/fallbacks/rachel-character.jpg" alt="Rachel Amber">
+						</picture>
 						<div class="character-description">
 							<p>Rachel é popular e legal, mas também rebelde. Ia à muitas festas, usava drogas e tinha uma grande paixão por punk rock, assim como Chloe, expressada tanto em seu gosto musical e estilo.</p>
 						</div>
@@ -155,56 +197,104 @@
 
 					<div class="songs">
 						<ul>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Angus & Julia Stone - Santa Monica Dream</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Angus & Julia Stone - Santa Monica Dream</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Local Natives - Mt. Washington</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Local Natives - Mt. Washington</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Syd Matters - To All Of You</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Syd Matters - To All Of You</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">alt-J - Something Good</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">alt-J - Something Good</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Breton - Got Well Soon</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Breton - Got Well Soon</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Message To The Bears - Mountains</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Message To The Bears - Mountains</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">José González - Crosses</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">José González - Crosses</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Amanda Palmer - In My Mind (feat. Brian Viglione)</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Amanda Palmer - In My Mind (feat. Brian Viglione)</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Bright Eyes - Lua</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Bright Eyes - Lua</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Mogwai - Kids Will Be Skeletons</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Mogwai - Kids Will Be Skeletons</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Sparklehorse - Piano Fire</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Sparklehorse - Piano Fire</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Mudflow - The Sense of Me</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Mudflow - The Sense of Me</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Foals - Spanish Sahara</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Foals - Spanish Sahara</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Syd Matters - Obstacles</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Syd Matters - Obstacles</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Golden Hour</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Golden Hour</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">The Storm</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">The Storm</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Blackwell Academy</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Blackwell Academy</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Kate</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Kate</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Timeless</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Timeless</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Timelines</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Timelines</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Night Walk</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Night Walk</a>
+							</li>
 							<hr>
-							<li><a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW" target="_blank" rel="noopener">Max and Chloe</a></li>
+							<li>
+								<a href="https://open.spotify.com/playlist/1f5ZzLDTXHTDR8CYIEddpW">Max and Chloe</a>
+							</li>
 							<hr>
 						</ul>
 					</div>
 				</div>
 				
 				<div class="soundtrack-image">
-					<img src="assets/img/soundtrack.jpg" alt="Soundtrack">
+					<picture>
+						<source type="image/webp" srcset="assets/img/webp/soundtrack.webp">
+						<source type="image/jpeg" srcset="assets/img/webp/soundtrack.jpg" />
+						<img src="assets/img/fallbacks/soundtrack.jpg" alt="Soundtrack">
+					</picture>
 				</div>
 			</section>
 
@@ -233,15 +323,19 @@
 							<li><a href="http://deckninegames.com/" target="_blank" rel="noopener">Deck Nine Games</a></li>
 							<li><a href="https://www.feralinteractive.com/br/" target="_blank" rel="noopener">Feral Interactive</a></li>
 						</ul>
-
-						<img class="go-to-top" src="assets/img/top.png" alt="Ir para o topo" title="Ir para o topo">
+						
+						<picture class="go-to-top" title="Ir para o topo">
+							<source type="image/webp" srcset="assets/img/webp/top.webp">
+							<source type="image/png" srcset="assets/img/webp/top.png" />
+							<img src="assets/img/fallbacks/top.png" alt="Ir para o topo">
+						</picture>
 					</div>
 
 					<div class="footer-item">
 						<label for="newsletter"><h2>Newsletter</h2></label>
 						<form method="POST">
 							<input id="newsletter" type="email" placeholder="Email Address" autocomplete="off">
-							<button type="submit">&raquo;</button>
+							<button type="submit" class="send">&raquo;</button>
 						</form>
 					</div>
 
@@ -249,9 +343,15 @@
 						<h2>Outros Jogos</h2>
 						
 						<ul>
-							<li><a href="before-the-storm.html" target="_blank" rel="noopener">Before the Storm</a></li>
-							<li><a href="captain-spirit.html" target="_blank" rel="noopener">Captain Spirit</a></li>
-							<li><a href="life-is-strange-2.html" target="_blank" rel="noopener">Life is Strange 2</a></li>
+							<li>
+								<a href="before-the-storm.html">Before the Storm</a>
+							</li>
+							<li>
+								<a href="captain-spirit.html">Captain Spirit</a>
+							</li>
+							<li>
+								<a href="life-is-strange-2.html">Life is Strange 2</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -262,15 +362,22 @@
 
 		<nav class="menu-right">
 			<ul>
-				<a href="before-the-storm.html" alt="Life is Strange: Before the Storm" title="Life is Strange: Before the Storm"><li id="before-the-storm">Before the storm</li></a>
-				<a href="captain-spirit.html" alt="The Awesome Adventures of Captain Spirit" title="The Awesome Adventures of Captain Spirit"><li id="captain-spirit">Captain Spirit</li></a>
-				<a href="life-is-strange-2.html" alt="Life is Strange 2" title="Life is Strange 2"><li id="lis-2">Life is Strange 2</li></a>
+				<a href="before-the-storm.html" title="Life is Strange: Before the Storm">
+					<li>Before the storm</li>
+				</a>
+				<a href="captain-spirit.html" title="The Awesome Adventures of Captain Spirit">
+					<li>Captain Spirit</li>
+				</a>
+				<a href="life-is-strange-2.html" title="Life is Strange 2">
+					<li>Life is Strange 2</li>
+				</a>
 			</ul>
 		</nav>
 	</section>
 	
 	<!-- JavaScript Files -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" aync></script>
+	<script src="assets/js/modernizr-webp.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" async></script>
 	<script type="text/javascript" src="assets/js/script.js" defer></script>
 </body>

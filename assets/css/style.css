@@ -66,11 +66,18 @@ body {
 	position: absolute;
 	width: 100%;
 	min-height: 100vh;
-	background-image: url('../img/max-storm4.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	z-index: 9999;
+}
+
+.webp .overlay {
+	background-image: url('../img/webp/max-storm4.webp');
+}
+
+.no-webp .overlay {
+	background-image: url('../img/fallbacks/max-storm4.jpg');
 }
 
 .overlay p {
@@ -94,12 +101,9 @@ body {
 	background-color: #000;
 }
 
-.myBtn {
+button {
 	font-family: 'Poppins';
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	display: block;
 	padding: 24px 48px;
 	font-weight: 700;
@@ -116,12 +120,11 @@ body {
 	transition: 0.8s ease-out;
 }
 
-.myBtn:hover {
-	color: #101010;
+button:hover {
 	cursor: crosshair;
 }
 
-.myBtn:before {
+button:before {
 	content: "";
 	position: absolute;
 	background: #FFF;
@@ -133,8 +136,18 @@ body {
 	transition: top 0.8s ease-out;
 }
 
-.myBtn:hover:before {
+button:hover:before {
 	top: 0;
+}
+
+.intro-btn {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.intro-btn:hover {
+	color: #101010;
 }
 
 /* Unofficial Header */
@@ -609,7 +622,7 @@ input:checked ~ label .burger::after {
 	display: inline-block;
 }
 
-.footer-item button {
+.footer-item .send {
 	background-color: transparent;
 	border: 2px solid #000;
 	padding: 10px;
@@ -677,6 +690,106 @@ input:checked ~ label .burger::after {
 .menu-right a {
 	text-decoration: none;
 	color: #000;
+}
+
+/* Secondary pages */
+
+.bg {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+}
+
+.coming-soon {
+	align-self: center;
+	font-family: 'Anton', 'Oswald';
+	font-size: 17.2161vw;
+	font-weight: bold;
+	margin-left: 20px;
+	letter-spacing: 3px;
+}
+
+.alt-btn {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	left: auto;
+	transform: none;
+	transition: 0.8s ease-out;
+}
+
+.alt-btn:hover {
+	color: #FFF;
+}
+
+/* Secondary pages -> Specific style for each file */
+
+.btn-before-the-storm:before {
+	background: #791576;
+}
+
+.btn-life-is-strange-2:before {
+	background: #2C3B4E;
+}
+
+.btn-captain-spirit:before {
+	background: #EEC44C;
+}
+
+.before-the-storm {
+	color: rgba(121,21,118,0.7);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	.webp .before-the-storm {
+		background-image: url(../img/webp/lis-before-the-storm.webp);
+	}
+	.no-webp .before-the-storm {
+		background-image: url(../img/fallbacks/lis-before-the-storm.jpg);
+	}
+
+.life-is-strange-2 {
+	color: rgba(44,59,78,0.7);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	.webp .life-is-strange-2 {
+		background-image: url(../img/webp/life-is-strange-2.webp);	
+	}
+	.no-webp .life-is-strange-2 {
+		background-image: url(../img/fallbacks/life-is-strange-2.jpg);	
+	}
+
+.captain-spirit {
+	color: rgba(238,196,76,0.7);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	.webp .captain-spirit {
+		background-image: url(../img/webp/captain-spirit.webp);
+	}
+	.no-webp .captain-spirit {
+		background-image: url(../img/fallbacks/captain-spirit.jpg);
+	}
+
+/* Secondary pages -> Selections */
+
+.captain-spirit .coming-soon::selection {
+	background-color: #EEC44C;
+	color: #2a2a2a;
+}
+
+.before-the-storm .coming-soon::selection {
+	background-color: #791576;
+	color: #2a2a2a;
+}
+
+.life-is-strange-2 .coming-soon::selection {
+	background-color: #2C3B4E;
+	color: #2a2a2a;
 }
 
 /* Media Queries */

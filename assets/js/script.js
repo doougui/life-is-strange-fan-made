@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 function fadeOut() {
 
-	TweenMax.to(".myBtn", 1, {
+	TweenMax.to(".intro-btn", 1, {
 		y: -100,
 		opacity: 0
 	});
