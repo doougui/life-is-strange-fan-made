@@ -1,5 +1,5 @@
-const c = element => document.querySelector(element);
-const cs = element => document.querySelectorAll(element);
+const $ = element => document.querySelector(element);
+const $l = element => document.querySelectorAll(element);
 
 // Introduction
 
@@ -7,11 +7,11 @@ function displayIntro() {
 	if (!localStorage.getItem('intro-displayed')) {
 		saveToStorage();
 
-		c('.overlay').style.display = 'block';
+		$('.overlay').style.display = 'block';
 	} else {
-		c('body').style.overflow = 'visible';
-		c('.overlay').style.display = 'none';
-		c('.overlay-2').style.display = 'none';
+		$('body').style.overflow = 'visible';
+		$('.overlay').style.display = 'none';
+		$('.overlay-2').style.display = 'none';
 	}
 }
 
@@ -51,10 +51,10 @@ function fadeOut() {
 
 // Header
 
-const bodyElement = c('body');
-const warnElement = c('#unofficial-header');
-const headerElement = c('.header-bg');
-const leftMenuElement = c('.menu-left');
+const bodyElement = $('body');
+const warnElement = $('#unofficial-header');
+const headerElement = $('.header-bg');
+const leftMenuElement = $('.menu-left');
 
 function setMenuPosition() {
 	let prevScrollpos = window.pageYOffset;
@@ -108,19 +108,19 @@ function closeUnofficialHeader() {
 
 function adaptSynopsisTitle() {
 	if (window.screen.availWidth >= 1220) {
-		c('#title-synopsis').style.top = "118px";
+		$('#title-synopsis').style.top = "118px";
 	} else if (window.screen.availWidth < 1220 && window.screen.availWidth >= 983) {
-		c('#title-synopsis').style.top = "98px";
+		$('#title-synopsis').style.top = "98px";
 	} else if (window.screen.availWidth < 983 && window.screen.availWidth >= 770) {
-		c('#title-synopsis').style.top = "90px";
+		$('#title-synopsis').style.top = "90px";
 	}
 }
 
 // Fullscreen menu for mobile devices
 
-const mobileButton = c('#burger-menu');
-const fullscreenMenu = c('.fullscreen-menu');
-const fullscreenList = c('.fullscreen-menu ul');
+const mobileButton = $('#burger-menu');
+const fullscreenMenu = $('.fullscreen-menu');
+const fullscreenList = $('.fullscreen-menu ul');
 
 function openFullscreenMenu() {
 	if (mobileButton.checked == true && window.screen.availWidth <= 983) {
@@ -149,7 +149,7 @@ function closeFullscreenMenu() {
 
 function getScrollTopByHref(element) {
 	const id = element.getAttribute('href');
-	return c(id).offsetTop;
+	return $(id).offsetTop;
 }
 
 function getTargetPosition(target) {
@@ -167,10 +167,10 @@ function scrollToPosition(to = 0) {
 // Listeners
 
 window.addEventListener('load', displayIntro);
-c('#close-box').addEventListener('click', closeUnofficialHeader);
-c('#burger-menu').addEventListener('click', openFullscreenMenu);
+$('#close-box').addEventListener('click', closeUnofficialHeader);
+$('#burger-menu').addEventListener('click', openFullscreenMenu);
 
-cs('.menu-item[href^="#"]').forEach(item => item.addEventListener('click', event => {
+$l('.menu-item[href^="#"]').forEach(item => item.addEventListener('click', event => {
 	event.preventDefault();
 
 	if (item.closest('nav').classList.contains('fullscreen-menu')) {
@@ -180,9 +180,9 @@ cs('.menu-item[href^="#"]').forEach(item => item.addEventListener('click', event
 	getTargetPosition(event.target);
 }));
 
-c('.go-to-top').addEventListener('click', scrollToPosition);
+$('.go-to-top').addEventListener('click', scrollToPosition);
 
-c('.intro-btn').addEventListener('click', () => {
+$('.intro-btn').addEventListener('click', () => {
 	fadeOut();
 	setTimeout(enableScroll, 2800);
 });
