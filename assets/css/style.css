@@ -18,6 +18,28 @@
   src: url(../font/Oswald-Regular.ttf);
 }
 
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   overflow: hidden;
 }
@@ -32,7 +54,7 @@ body {
 /* Scrollbar & Selection */
 
 ::-webkit-scrollbar {
-  width: 3px;
+  width: .3rem;
   background-color: #F4F7F6;
   height: 0;
 }
@@ -104,7 +126,7 @@ button:not(.send) {
   font-family: 'Poppins';
   position: absolute;
   display: block;
-  padding: 24px 48px;
+  padding: 2.4rem 4.8rem;
   font-weight: 700;
   font-size: 0.75em;
   letter-spacing: 6px;
