@@ -62,7 +62,6 @@ body {
 
 .overlay {
   display: none;
-  z-index: 10;
   position: absolute;
   width: 100%;
   min-height: 100vh;
@@ -192,10 +191,9 @@ button:not(.send):hover:before {
 .item-unofficial-header:nth-child(1) p::after {
   content: '';
   display: block;
-  width: 0px;
+  width: 0;
   height: 1px;
   background-color: currentColor;
-  transform: width .3s;
 }
 
 .item-unofficial-header:nth-child(1) p:hover::after {
@@ -219,7 +217,7 @@ button:not(.send):hover:before {
 
 .header-bg {
   background-color: #F4F7F6;
-  border-bottom: 0.5px solid #E6EAEA;
+  border-bottom: .5px solid #E6EAEA;
   z-index: 5;
   transition: top 0.8s ease;
 }
@@ -235,7 +233,7 @@ button:not(.send):hover:before {
 
 .fullscreen-menu {
   width: 100%;
-  height: 0vh;
+  height: 0;
   background-color: #FCFCFC;
   position: fixed;
   z-index: 10;
@@ -442,16 +440,12 @@ input:checked ~ label .burger::after {
   margin-right: 5px;
   color: #333;
   line-height: 1.5;
+  min-width: 180px;
 }
 
-@media only screen and (max-width: 1366px) {
-  .synopsis p {
-    max-width: 430px;
-  }
-
-  .expanded-synopsis {
-    display: none;
-  }
+.synopsys-img {
+  position: relative;
+  z-index: -1;
 }
 
 .title-synopsis {
@@ -463,6 +457,44 @@ input:checked ~ label .burger::after {
   font-family: 'Oswald', 'Poppins', serif;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+.title-synopsis-over-img {
+  color: #EEE;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+  margin-top: 0;
+  display: none;
+}
+
+@media only screen and (max-width: 1531px) {
+  .synopsis p {
+    max-width: 430px;
+  }
+
+  .expanded-synopsis {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .title-synopsis-over-img {
+    display: block;
+  }
+
+  .synopsis-content .title-synopsis {
+    display: none;
+  }
+
+  .synopsis-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* Container -> Content -> Characters */
@@ -608,7 +640,6 @@ input:checked ~ label .burger::after {
 }
 
 .footer-item ul li {
-  font-family: HankenGrotesk-Light, Courier, Verdana;
   font-weight: bold;
   font-size: 1em;
   line-height: 1.125em;
@@ -804,217 +835,3 @@ input:checked ~ label .burger::after {
   background-color: #2C3B4E;
 }
 
-/* Media Queries */
-
-/* Media Queries -> Large Devices */
-
-@media only screen and (max-width: 1235px) {
-  .title-soundtrack {
-    font-size: 7.0em;
-  }
-}
-
-@media only screen and (max-width: 1220px) {
-  .synopsis p {
-    margin-bottom: 0px;
-  }
-
-  .title-synopsis {
-    font-size: 7.0em;
-  }
-}
-
-@media only screen and (max-width: 1196px) {
-  .title-soundtrack {
-    font-size: 6.0em;
-  }
-}
-
-@media only screen and (max-width: 1110px) {
-  .menu-right {
-    display: none;
-  }
-  .life-is-strange-games-mobile {
-    display: block;
-  }
-  .title-synopsis {
-    top: 130px;
-    right: 100px;
-  }
-  .title-soundtrack {
-    font-size: 5.0em;
-    text-align: center;
-  }
-  .title-soundtrack::after {
-    content: '';
-    width: 100px;
-    height: 1px;
-    margin: auto;
-    display: block;
-    background-color: currentColor;
-    margin-top: 13px;
-    margin-bottom: 16px;
-  }
-}
-
-/* Media Queries -> Medium Devices */
-
-@media only screen and (max-width: 983px) {
-  .title-synopsis {
-    font-size: 7.5em;
-    right: 155px;
-  }
-  .synopsis p {
-    margin-bottom: 40px;
-  }
-  .menu-left {
-    display: none;
-  }
-  .content {
-    margin-left: 0px;
-  }
-  .burger {
-    display: block;
-  }
-  .footer-item:last-child {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 865px) {
-  .synopsis p {
-    margin-bottom: 0px;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  .synopsis-image {
-    position: relative;
-    width: 100%;
-  }
-  .title-synopsis {
-    left: 50px;
-    top: 100px;
-    color: white;
-    font-size: 6em;
-  }
-  .synopsis-content {
-    display: flex;
-    align-items: center;
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .soundtrack-image {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 687px) {
-  .title-synopsis {
-    left: 30px;
-    top: 90px;
-  }
-}
-
-@media only screen and (max-width: 623px) {
-  .title-synopsis {
-    font-size: 5em;
-    left: 40px;
-    top: 90px;
-  }
-}
-
-/* Media Queries -> Small Devices */
-
-@media only screen and (max-width: 585px) {
-  .synopsis {
-    flex-direction: column;
-  }
-  .synopsis img {
-    width: 100%;
-    padding: 10px;
-  }
-  .synopsis p {
-    max-width: 100%;
-    padding-top: 0px;
-    text-align: center;
-  }
-  .synopsis p::before {
-    content: '';
-    width: 100px;
-    height: 1px;
-    margin: auto;
-    display: block;
-    background-color: currentColor;
-    margin-bottom: 13px;
-  }
-  .title-synopsis {
-    font-size: 7em;
-    left: 80px;
-    top: 100px;
-  }
-  .character-description p {
-    text-align: center;
-  }
-  .unofficial-header-bg {
-    padding: 5px 0px;
-  }
-}
-
-@media only screen and (max-width: 502px) {
-  .character-description p::before {
-    content: '';
-    width: 100px;
-    height: 1px;
-    margin: auto;
-    display: block;
-    background-color: currentColor;
-    margin-bottom: 13px;
-  }
-}
-
-@media only screen and (max-width: 490px) {
-  .title-synopsis {
-    font-size: 6em;
-  }
-}
-
-@media only screen and (max-width: 430px) {
-  .title-synopsis {
-    left: 50px;
-    top: 85px;
-  }
-  .title-soundtrack {
-    font-size: 4.5em;
-  }
-}
-
-@media only screen and (max-width: 390px) {
-  .title-synopsis {
-    font-size: 5em;
-  }
-  .title-soundtrack {
-    font-size: 4em;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .title-synopsis {
-    font-size: 4em;
-    left: 60px;
-  }
-  .title-soundtrack {
-    font-size: 3em;
-  }
-  .logo img {
-    width: 140px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .title-synopsis {
-    left: 50px;
-    top: 70px;
-  }
-}
