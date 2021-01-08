@@ -126,7 +126,7 @@ button:not(.send) {
   display: block;
   padding: 2.4rem 4.8rem;
   font-weight: 700;
-  font-size: .75em;
+  font-size: 1.2rem;
   letter-spacing: .6rem;
   color: #fff;
   border: .2rem solid #FFF;
@@ -771,8 +771,8 @@ input:checked ~ label .burger::after {
   left: auto;
   transform: none;
   transition: .8s ease-out;
-  font-size: 1.2rem !important;
 }
+
 /* o Douglas é muito chato */
 .alt-btn:hover {
   color: #FFF;
