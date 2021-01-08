@@ -922,4 +922,8 @@ input:checked ~ label .burger::after {
   .title-soundtrack {
     font-size: 5rem;
   }
+
+  .unofficial-header {
+    padding: 1rem 0;
+  }
 }
