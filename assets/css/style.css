@@ -784,6 +784,10 @@ input:checked ~ label .burger::after {
   background: #791576;
 }
 
+.btn-true-colors:before {
+  background: #FE0AFE;
+}
+
 .btn-life-is-strange-2:before {
   background: #2C3B4E;
 }
@@ -800,6 +804,16 @@ input:checked ~ label .burger::after {
 }
 .no-webp .before-the-storm {
   background-image: url(../img/fallbacks/lis-before-the-storm.jpg);
+}
+
+.true-colors {
+  color: rgba(254, 10, 254, 0.7);
+}
+.webp .true-colors {
+  background-image: url(../img/webp/lis-true-colors.webp);
+}
+.no-webp .true-colors {
+  background-image: url(../img/fallbacks/lis-true-colors.jpg);
 }
 
 .life-is-strange-2 {
@@ -835,6 +849,9 @@ input:checked ~ label .burger::after {
 }
 .life-is-strange-2 .coming-soon::selection {
   background-color: #2C3B4E;
+}
+.true-colors .coming-soon::selection {
+  background-color: #FE0AFE;
 }
 
 @media only screen and (max-width: 1531px) {
