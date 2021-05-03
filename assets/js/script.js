@@ -196,3 +196,8 @@ if ('serviceWorker' in navigator) {
       .then(reg => console.info('registered sw', reg))
       .catch(err => console.error('error registering sw', err));
 }
+
+// Footer copyright year
+
+const year = $('.copyright .year');
+year.textContent = new Date().getFullYear();

@@ -636,12 +636,16 @@ input:checked ~ label .burger::after {
   text-transform: uppercase;
 }
 
-.footer-item h4 {
+.copyright {
   font-family: Oswald;
   font-weight: bold;
   letter-spacing: 2px;
   color: #999b9b;
   font-size: 1.9rem;
+}
+
+.year {
+  font-family: Oswald;
 }
 
 .footer-item ul {
