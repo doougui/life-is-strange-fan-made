@@ -914,6 +914,11 @@ input:checked ~ label .burger::after {
 }
 
 @media only screen and (max-width: 567px) {
+  .synopsis p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .synopsys-img {
     width: 100%;
     padding-right: 1rem;
